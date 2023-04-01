@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tasks Organization Matrix</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Organization Matrix by Tasks</h1>
+    </header>
+    <main>
+      <p>Please reach out to respective tasks owners for any queries</p>
+      <p>Or click below to send an instant e-mail or get on a call</p>
+      <button>Refresh</button>
+	  <br>
+      <table id="myTable">
+        <tbody>
+          <tr>
+            <td draggable="true"><div class="box">Task1</div></td>
+            <td draggable="true"><div class="box">xyz</div></td>
+            <td draggable="true"><div class="box">email1</div></td>
+            <td draggable="true"><div class="box">phonedigits</div></td>
+            <td draggable="true"><div class="box">abc</div></td>
+          </tr>
+         <tr>
+            <td draggable="true"><div class="box">Task2</div></td>
+            <td draggable="true"><div class="box">xyz</div></td>
+            <td draggable="true"><div class="box">email2</div></td>
+            <td draggable="true"><div class="box">phonedigits</div></td>
+            <td draggable="true"><div class="box">abc</div></td>
+          </tr>
+           <tr>
+            <td draggable="true"><div class="box">Task3</div></td>
+            <td draggable="true"><div class="box">xyz</div></td>
+            <td draggable="true"><div class="box">email3</div></td>
+            <td draggable="true"><div class="box">phonedigits</div></td>
+            <td draggable="true"><div class="box">abc</div></td>
+          </tr>
+            <tr>
+            <td draggable="true"><div class="box">Task4</div></td>
+            <td draggable="true"><div class="box">xyz</div></td>
+            <td draggable="true"><div class="box">email4</div></td>
+            <td draggable="true"><div class="box">phonedigits</div></td>
+            <td draggable="true"><div class="box">abc</div></td>
+          </tr>
+           <tr>
+            <td draggable="true"><div class="box">Task5</div></td>
+            <td draggable="true"><div class="box">xyz</div></td>
+            <td draggable="true"><div class="box">email5</div></td>
+            <td draggable="true"><div class="box">phonedigits</div></td>
+            <td draggable="true"><div class="box">abc</div></td>
+          </tr>
+            <tr>
+            <td draggable="true"><div class="box">Task6</div></td>
+            <td draggable="true"><div class="box">xyz</div></td>
+            <td draggable="true"><div class="box">email6</div></td>
+            <td draggable="true"><div class="box">phonedigits</div></td>
+            <td draggable="true"><div class="box">abc</div></td>
+          </tr>
+           <tr>
+            <td draggable="true"><div class="box">Task7</div></td>
+            <td draggable="true"><div class="box">xyz</div></td>
+            <td draggable="true"><div class="box">email7</div></td>
+            <td draggable="true"><div class="box">phonedigits</div></td>
+            <td draggable="true"><div class="box">abc</div></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <p>&copy; 2023 Big time</p>
+    </footer>
+	<script>
+	const cells = document.querySelectorAll('#draggable-table td[draggable="true"]');
+
+let draggedCell = null;
+
+cells.forEach(cell => {
+  cell.addEventListener('dragstart', () => {
+    draggedCell = cell;
+  });
+
+  cell.addEventListener('dragover', event => {
+    event.preventDefault();
+  });
+
+  cell.addEventListener('drop', () => {
+    const swappedValue = cell.textContent;
+    cell.textContent = draggedCell.textContent;
+    draggedCell.textContent = swappedValue;
+    draggedCell = null;
+  });
+});
+	</script>
+  </body>
+</html>

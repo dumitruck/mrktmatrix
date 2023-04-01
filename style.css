@@ -1,0 +1,57 @@
+body {
+  background-color: #F5DEB3;
+}
+
+header {
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+button {
+  background-color: #FFFFFF;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  border-radius: 10px;
+  border: 2px solid #000000; /* add border to the table */
+}
+}
+
+td {
+  border-collapse: separate;
+  border-spacing: 10px;
+  padding: 10px;
+  border: 2px solid #FF0000; /* add border to the cells */
+  border-radius: 5px; /* add rounded corners to the cells */
+}
+
+td[draggable="true"] {
+  cursor: move; /* change cursor to move for draggable cells */
+}
+
+.box {
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  background-color: #C8A2C8;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
